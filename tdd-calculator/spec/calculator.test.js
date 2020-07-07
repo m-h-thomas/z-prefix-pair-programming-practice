@@ -8,7 +8,7 @@ describe('Calculator', () => {
   })
 
 
-  it('will add two numbers together', () => {
+  it('will add numbers together', () => {
     let calculator = new Calculator();
 
     expect(calculator.addInputs(2, 3).toEqual(5))
@@ -16,25 +16,15 @@ describe('Calculator', () => {
 
 
 
-  it('will add three numbers together', () => {
+  it('will add multiple numbers together', () => {
     let calculator = new Calculator();
 
     expect(calculator.addInputs(1, 3, 5).toEqual(8))
+    expect(calculator.addInputs(5, 5, 10, 10, 20, 10, 3)).toEqual(63)
   })
 
 
-
-  it('will add as many numbers together as are input', () => {
-    let calculator = new Calculator() 
-
-    expect(calculator.addInputs(1, 2, 3, 4, 5, 6, 7, 8).toEqual(36))
-    expect(calculator.addInputs(1).toEqual(1))
-    expect(calculator.addInputs(25, 25, 25, 25).toEqual(100))
-  })
-
-
-
-  it('will multiply two numbers together', () => {
+  it('will multiply numbers together', () => {
     let calculator = new Calculator() 
 
     expect(calculator.multiplyInputs(3, 5).toEqual(15))
@@ -42,7 +32,7 @@ describe('Calculator', () => {
   
 
 
-  it('will multiply three numbers together', () => {
+  it('will multiply many numbers together', () => {
     let calculator = new Calculator()
 
     expect(calculator.multiplyInputs(2, 4, 6).toEqual(48))
@@ -58,10 +48,18 @@ describe('Calculator', () => {
 
 
 
-  it('will subtract one number from the other', () => {
+  it('will calculate the difference between numbers', () => {
     let calculator = new Calculator()
 
     expect(calculator.subtractInputs(10, 4).toEqual(6))
+    expect(calculator.subtractInputs(10, 3, 2)).toEqual(5)
+  })
+
+  it('will allow you to chain together multiple operations', () => {
+    let calculator = new Calculator() 
+
+    expect(calculator.subtractInputs(10, 3).addInputs(5)).toEqual(12)
+    expect(calculator.addInputs(10, 5).multiplyInputs(2)).toEqual(30)
   })
 
 
