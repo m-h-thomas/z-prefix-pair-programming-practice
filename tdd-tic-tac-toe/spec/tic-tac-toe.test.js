@@ -34,30 +34,22 @@ describe('', () => {
 
 
 
-  it('should assign each player a symbol: X or O', () => {
-    let game = new TicTacToeGame();
+  // it('should assign each player a symbol: X or O', () => {
+  //   let game = new TicTacToeGame();
 
-    game.addPlayer("Player 1", "X")
-    game.addPlayer("Player 2", "O")
-    expect(game.getPlayerSymbols()).toEqual([
-      { player: "Player 1", symbol: "X" }, 
-      { player: "Player 2", symbol: "O" }
-    ])
-  })
+  //   game.addPlayer("Player 1", "X")
+  //   game.addPlayer("Player 2", "O")
+  //   expect(game.getPlayerSymbols()).toEqual([
+  //     { player: "Player 1", symbol: "X" }, 
+  //     { player: "Player 2", symbol: "O" }
+  //   ])
+  // })
 
 
-  it("should have 9 spaces", () => {
+  it("should initialize with 9 spaces", () => {
     let game = new TicTacToeGame()
 
-    expect(game.spaces.length).toBe(9);
-  });
-
-
-  it("should be blank when initialized", () => {
-    let game = new TicTacToeGame()
-    for(let space = 0; space<game.spaces.length; space++){
-        expect(game.spaces[space].mark).toBe("");
-    }
+    expect(game.getEmptySpaces()).toBe(9);
   });
 
 
@@ -68,10 +60,10 @@ describe('', () => {
     game.addPlayer("Player 2", "O") 
 
     game.updateBoard("Player 1", 0);
-    expect(game.spaces[0].mark).toBe("X");
+    expect(game.spaces[0]).toBe("X");
 
     game.updateBoard("Player 2", 5);
-    expect(game.spaces[5].mark).toBe("O")
+    expect(game.spaces[5]).toBe("O")
 });
 
 
@@ -118,20 +110,20 @@ describe('', () => {
 
 
 
-  it('should reset the game when the button is clicked', () => {
-    let game = new TicTacToeGame();
-    game.updateBoard("Player 1", 0);
-    game.updateBoard("Player 2", 1);
-    game.updateBoard("Player 1", 2);
-    game.updateBoard("Player 2", 3);
-    game.updateBoard("Player 1", 4);
-    game.updateBoard("Player 2", 5);
-    game.updateBoard("Player 1", 6);
-    game.updateBoard("Player 2", 7);
-    game.updateBoard("Player 1", 8);
+//   it('should reset the game when the button is clicked', () => {
+//     let game = new TicTacToeGame();
+//     game.updateBoard("Player 1", 0);
+//     game.updateBoard("Player 2", 1);
+//     game.updateBoard("Player 1", 2);
+//     game.updateBoard("Player 2", 3);
+//     game.updateBoard("Player 1", 4);
+//     game.updateBoard("Player 2", 5);
+//     game.updateBoard("Player 1", 6);
+//     game.updateBoard("Player 2", 7);
+//     game.updateBoard("Player 1", 8);
 
-    expect(game.reset()).toEqual([])
-    expect(board.availableSpaces()).toEqual([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
-  })
+//     expect(game.reset()).toEqual([])
+//     expect(board.availableSpaces()).toEqual([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+//   })
 
 })
