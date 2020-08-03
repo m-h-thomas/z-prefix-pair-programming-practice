@@ -3,7 +3,7 @@ const TicTacToeGame = require('../tic-tac-toe')
 /*USE THIS: https://github.com/murphyl337/TicTacToe/blob/master/js/specs/tttSpec.js*/ 
 
 
-describe('', () => {
+describe('Tic Tac Toe Game', () => {
   it('should initialize with a blank gameboard', () => {
     let game = new TicTacToeGame();
 
