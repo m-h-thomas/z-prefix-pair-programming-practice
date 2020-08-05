@@ -1,8 +1,7 @@
 class TicTacToeGame {
   constructor() {
-
+    
   }
-
 
 }
 
