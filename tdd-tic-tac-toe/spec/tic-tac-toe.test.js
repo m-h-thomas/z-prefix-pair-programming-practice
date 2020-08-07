@@ -128,7 +128,7 @@ describe('Tic Tac Toe Game', () => {
   //   game.updateBoard("Player 1", 8);
 
   //   expect(game.reset()).toEqual([])
-  //   expect(board.availableSpaces()).toEqual([0, 1, 2, 3, 4, 5, 6, 7, 8])
+  //   expect(game.getAvailableSpaces()).toEqual([0, 1, 2, 3, 4, 5, 6, 7, 8])
   // })
 
 })
