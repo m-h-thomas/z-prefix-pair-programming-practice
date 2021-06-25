@@ -88,13 +88,5 @@ describe('Calculator', () => {
     expect(calculator.negPosReversal(positiveInput)).toEqual(-5)
     expect(calculator.negPosReversal(negativeInput)).toEqual(10)
   })
-
-
-  it('will allow you to chain together multiple operations', () => {
-    let calculator = new Calculator() 
-
-    expect(calculator.subtractInputs(10, 3).addInputs(5)).toEqual(12)
-    expect(calculator.addInputs(10, 5).multiplyInputs(2)).toEqual(30)
-  })
   
 })
