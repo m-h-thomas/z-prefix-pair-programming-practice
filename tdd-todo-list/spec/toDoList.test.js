@@ -7,12 +7,12 @@ describe("ToDoList", () => {
     expect(list.getNumberOfToDos()).toEqual(0);
   });
 
-  //   it('allows you to add an item to your To Do List', () => {
-  //     let list = new ToDoList()
+    it('allows you to add an item to your To Do List', () => {
+      let list = new ToDoList()
 
-  //     list.addToDo("Grocery Shopping")
-  //     expect(list.getNumberOfToDos()).toEqual(1)
-  //   })
+      list.addToDo("Grocery Shopping")
+      expect(list.getNumberOfToDos()).toEqual(1)
+    })
 
   //   it('allows you to check for specific To Do items', () => {
   //     let list = new ToDoList()
