@@ -14,28 +14,28 @@ describe("ToDoList", () => {
       expect(list.getNumberOfToDos()).toEqual(1)
     })
 
-  //   it('allows you to check for specific To Do items', () => {
-  //     let list = new ToDoList()
-  //     expect(list.getNumberOfToDos()).toEqual(0)
-  //     expect(list.containsToDo("Mow Lawn")).toEqual(false)
+    it('allows you to check for specific To Do items', () => {
+      let list = new ToDoList()
+      expect(list.getNumberOfToDos()).toEqual(0)
+      expect(list.containsToDo("Mow Lawn")).toEqual(false)
 
-  //     list.addToDo("Mow Lawn")
-  //     list.addToDo("Dust Ceiling Fan")
-  //     list.addToDo("Laundry")
-  //     expect(list.getNumberOfToDos()).toEqual(3)
-  //     expect(list.containsToDo("Mow Lawn")).toEqual(true)
-  //   })
+      list.addToDo("Mow Lawn")
+      list.addToDo("Dust Ceiling Fan")
+      list.addToDo("Laundry")
+      expect(list.getNumberOfToDos()).toEqual(3)
+      expect(list.containsToDo("Mow Lawn")).toEqual(true)
+    })
 
-  //  it('allows you to delete a To Do item if the item is present', () => {
-  //     let list = new ToDoList()
-  //     list.addToDo("Mop Wood Floors")
-  //     list.addToDo("Organize Garage")
-  //     expect(list.getNumberOfToDos()).toEqual(2)
+   it('allows you to delete a To Do item if the item is present', () => {
+      let list = new ToDoList()
+      list.addToDo("Mop Wood Floors")
+      list.addToDo("Organize Garage")
+      expect(list.getNumberOfToDos()).toEqual(2)
 
-  //     const deletionResult = list.deleteToDo("Mop Wood Floors")
-  //     expect(deletionResult).toEqual(true)
-  //     expect(list.getNumberOfToDos()).toEqual(1)
-  //   })
+      const deletionResult = list.deleteToDo("Mop Wood Floors")
+      expect(deletionResult).toEqual(true)
+      expect(list.getNumberOfToDos()).toEqual(1)
+    })
 
   //   it('tells you a deletion failed if the item was not on the list', () => {
   //     let list = new ToDoList()

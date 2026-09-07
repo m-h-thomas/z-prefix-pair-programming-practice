@@ -11,6 +11,10 @@ class ToDoList {
     return this.toDos.length;
   }
 
+  containsToDo(task){
+    return this.toDos.includes(task)
+  }
+
 }
 
 module.exports = ToDoList
